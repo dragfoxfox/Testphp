@@ -107,9 +107,6 @@ function post() {
 global $__content_type__;
 list($method, $url, $headers, $kwargs, $body) = @decode_request(@file_get_contents('php://input'));
 $password = $GLOBALS['__password__'];
-if ($body && (strtoupper($method) != "OPTIONS")) {
-$headers['Content-Length'] = strval(strlen($body));
-}
 $header_array = array();
 foreach ($headers as $key => $value) {
 $header_array[] = join('-', array_map('ucfirst', explode('-', $key))).': '.$value;
