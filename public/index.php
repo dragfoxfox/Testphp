@@ -190,4 +190,4 @@ post();
 get();
 }
 }
-main();зрз etkb
+main();
